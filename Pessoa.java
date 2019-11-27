@@ -2,9 +2,9 @@ import java.util.Date;
 
 public abstract class Pessoa {
 
-  protected String nome;
-  protected String cpf;
-  protected Date dataCadastro;
+  private String nome;
+  private String cpf;
+  private Date dataCadastro;
 
   public String getNome() {
     return this.nome;
