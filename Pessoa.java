@@ -6,16 +6,28 @@ public abstract class Pessoa {
   protected String cpf;
   protected Date dataCadastro;
 
-  public abstract String getNome();
+  public String getNome() {
+    return this.nome;
+  }
 
-  public abstract void setNome(String nome);
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
-  public abstract String getCpf();
+  public String getCpf() {
+    return this.cpf;
+  }
 
-  public abstract void setCpf(String cpf);
+  public void setCpf(String cpf) {
+    this.cpf = cpf;
+  }
 
-  public abstract Date getDataCadastro();
+  public Date getDataCadastro() {
+    return this.dataCadastro;
+  }
 
-  public abstract void setDataCadastro(Date dataCadastro);
+  public void setDataCadastro(Date dataCadastro) {
+    this.dataCadastro = dataCadastro;
+  }
 
 }
