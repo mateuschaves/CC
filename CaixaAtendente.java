@@ -1,32 +1,29 @@
-import java.util.Date;
+import java.util.Calendar;
 
 public class CaixaAtendente extends Pessoa {
-    private Date horarioEntrada;
-    private Date horarioSaida;
+    private Calendar horarioEntrada;
+    private Calendar horarioSaida;
     private Caixa caixa;
 
-    public CaixaAtendente() {
-    }
-
-    public CaixaAtendente(Date horarioEntrada, Date horarioSaida, Caixa caixa) {
+    public CaixaAtendente(Calendar horarioEntrada, Calendar horarioSaida, Caixa caixa) {
         this.horarioEntrada = horarioEntrada;
         this.horarioSaida = horarioSaida;
         this.caixa = caixa;
     }
 
-    public Date getHorarioEntrada() {
+    public Calendar getHorarioEntrada() {
         return this.horarioEntrada;
     }
 
-    public void setHorarioEntrada(Date horarioEntrada) {
+    public void setHorarioEntrada(Calendar horarioEntrada) {
         this.horarioEntrada = horarioEntrada;
     }
 
-    public Date getHorarioSaida() {
+    public Calendar getHorarioSaida() {
         return this.horarioSaida;
     }
 
-    public void setHorarioSaida(Date horarioSaida) {
+    public void setHorarioSaida(Calendar horarioSaida) {
         this.horarioSaida = horarioSaida;
     }
 
