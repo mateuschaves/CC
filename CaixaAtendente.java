@@ -5,22 +5,24 @@ public class CaixaAtendente extends Pessoa {
     private Calendar horarioSaida;
     private Caixa caixa;
 
-    public CaixaAtendente(Calendar horarioEntrada, Calendar horarioSaida, Caixa caixa) {
-        this.horarioEntrada = horarioEntrada;
-        this.horarioSaida = horarioSaida;
-        this.caixa = caixa;
+    public CaixaAtendente(String nome, String cpf, Caixa caixa, Calendar horarioEntrada, Calendar horarioSaida) {
+        this.setNome(nome);
+        this.setCpf(cpf);
+        this.setCaixa(caixa);
+        this.setHorarioEntrada(horarioEntrada);
+        this.setHorarioSaida(horarioSaida);
     }
 
-    public Calendar getHorarioEntrada() {
-        return this.horarioEntrada;
+    public String getHorarioEntrada() {
+        return this.horarioEntrada.get(Calendar.HOUR) + ":" + "00";
     }
 
     public void setHorarioEntrada(Calendar horarioEntrada) {
         this.horarioEntrada = horarioEntrada;
     }
 
-    public Calendar getHorarioSaida() {
-        return this.horarioSaida;
+    public String getHorarioSaida() {
+        return this.horarioSaida.get(Calendar.HOUR) + ":" + "00";
     }
 
     public void setHorarioSaida(Calendar horarioSaida) {
