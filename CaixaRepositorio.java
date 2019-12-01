@@ -7,4 +7,16 @@ public class CaixaRepositorio {
         this.caixas.add(caixa);
         return caixa;
     }
+
+    public void delete(int numero) {
+        int count = 0;
+        for (Caixa caixa : caixas) {
+            if (caixa.getNumero() == numero) {
+                caixas.remove(count);
+            }
+            count = count + 1;
+        }
+
+    }
+
 }
