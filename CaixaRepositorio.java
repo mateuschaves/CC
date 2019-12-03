@@ -19,4 +19,16 @@ public class CaixaRepositorio {
 
     }
 
+    public Caixa update(int numero, Caixa caixaUpdated) {
+        int count = 0;
+        for (Caixa caixa : caixas) {
+            if (caixa.getNumero() == numero) {
+                caixas.set(count, caixaUpdated);
+                return caixas.get(count);
+            }
+            count = count + 1;
+        }
+        return null;
+    }
+
 }
