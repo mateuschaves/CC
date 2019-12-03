@@ -14,7 +14,7 @@ public class Main {
                 horaSaida);
 
         CaixaRepositorio repo = new CaixaRepositorio();
-        repo.create(caixa);
+        repo.criar(caixa);
 
         System.out.println("Nome: " + caixaAtendente.getNome());
         System.out.println("Horario de entrada: " + caixaAtendente.getHorarioEntrada());
