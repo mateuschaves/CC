@@ -43,4 +43,8 @@ public class CaixaRepositorio {
         return null;
     }
 
+    public ArrayList<Caixa> listar() {
+        return this.caixas;
+    }
+
 }
