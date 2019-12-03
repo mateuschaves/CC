@@ -34,10 +34,10 @@ public class Produto {
         this.valor = valor;
     }
 
-    public void getDistribuidor(String distribuidor) {
+    public void getDistribuidor() {
         return this.distribuidor;
     }
 
-public void setDistribuidor(String distribuidor) {
+public void setDistribuidor() {
         this.distribuidor = distribuidor;
     }
