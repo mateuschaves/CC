@@ -1,4 +1,5 @@
 public class Produto {
+    private Integer id;
     private String nome;
     private String marca;
     private double valor;
@@ -6,7 +7,8 @@ public class Produto {
     private Integer quantidadeEstoque;
     private Integer quantidadeCompra;
 
-    public Produto(String nome, String marca, double valor, String distribuidor, Integer estoque, Integer compra) {
+    public Produto( Integer id,String nome, String marca, double valor, String distribuidor, Integer estoque, Integer compra) {
+        this.id=id;
         this.nome = nome;
         this.marca = marca;
         this.valor = valor;
@@ -57,5 +59,11 @@ public class Produto {
     }
     public void setCompra(Integer compra) {
         this.quantidadeCompra = compra;
+    }
+     public int getId() {
+        return this.id;
+    }
+    public void setId(int id) {
+        this.id = id;
     }
 }
