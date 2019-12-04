@@ -1,63 +1,45 @@
-public class Cliente{
-    private String Nome;
-    private String CPF;
+import java.util.Date;
+public class Cliente extends Pessoa{
+
     private String Email;
     private String Telefone;
     private String Endereco;
 
-    public novoCliente (String Nome, String CPF, String Telefone, String Endereco){
-        this.Nome = Nome;
-        this.CPF = CPF;
-        this.Telefone = Telefone;
-        this.Endereco = Endereco;
+    public novoCliente (String nome, String cpf, Date dataCadastro, String Telefone, String Endereco){
+        this.setNome(nome);
+        this.setCPF(cpf);
+        this.setDataCadastro(dataCadastro);
+        this.setTelefone(Telefone);
+        this.setEndereco(Endereco);
     }
     
-    public novoCliente (String Nome, String CPF, String Email, String Telefone, String Endereco){
-        this.Nome = Nome;
-        this.CPF = CPF;
-        this.Email = Email;
-        this.Telefone = Telefone;
-        this.Endereco = Endereco;
-    }
-
-    public String getNome() {
-        return this.Nome;
-    }
-
-    public String getCPF() {
-        return this.CPF;
+    public novoCliente (String nome, String cpf, Date dataCadastro, String Email, String Telefone, String Endereco){
+        this.setNome(nome);
+        this.setCPF(cpf);
+        this.setDataCadastro(dataCadastro);
+        this.setEmail(Email);
+        this.setTelefone(Telefone);
+        this.setEndereco(Endereco);
     }
 
     public String getEmail() {
         return this.Email;
     }
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
 
     public String getTelefone() {
         return this.Telefone;
+    }
+    public void setTelefone(String Telefone) {
+        this.Telefone = Telefone;
     }
 
     public String getEndereco() {
         return this.Endereco;
     }
-
-    public void setNome(String Nome) {
-        this.Nome = Nome;
-    }
-
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
-    }
-    
-    public void setEmail(String Email) {
-        this.Email = Email;
-    }
-    
-    public void setTelefone(String Telefone) {
-        this.Telefone = Telefone;
-    }
-
     public void setEndereco(String Endereco) {
         this.Endereco = Endereco;
     }
-
 }
