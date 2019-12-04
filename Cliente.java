@@ -1,21 +1,22 @@
 import java.util.Date;
-public class Cliente extends Pessoa{
+
+public class Cliente extends Pessoa {
 
     private String Email;
     private String Telefone;
     private String Endereco;
 
-    public novoCliente (String nome, String cpf, Date dataCadastro, String Telefone, String Endereco){
+    public Cliente(String nome, Date dataCadastro, String telefone, String endereco, String cpf) {
         this.setNome(nome);
-        this.setCPF(cpf);
         this.setDataCadastro(dataCadastro);
-        this.setTelefone(Telefone);
-        this.setEndereco(Endereco);
+        this.setTelefone(telefone);
+        this.setEndereco(endereco);
+        this.setCpf(cpf);
     }
-    
-    public novoCliente (String nome, String cpf, Date dataCadastro, String Email, String Telefone, String Endereco){
+
+    public Cliente(String nome, String cpf, Date dataCadastro, String email, String telefone, String endereco) {
         this.setNome(nome);
-        this.setCPF(cpf);
+        this.setCpf(cpf);
         this.setDataCadastro(dataCadastro);
         this.setEmail(Email);
         this.setTelefone(Telefone);
@@ -25,6 +26,7 @@ public class Cliente extends Pessoa{
     public String getEmail() {
         return this.Email;
     }
+
     public void setEmail(String Email) {
         this.Email = Email;
     }
@@ -32,6 +34,7 @@ public class Cliente extends Pessoa{
     public String getTelefone() {
         return this.Telefone;
     }
+
     public void setTelefone(String Telefone) {
         this.Telefone = Telefone;
     }
@@ -39,6 +42,7 @@ public class Cliente extends Pessoa{
     public String getEndereco() {
         return this.Endereco;
     }
+
     public void setEndereco(String Endereco) {
         this.Endereco = Endereco;
     }
