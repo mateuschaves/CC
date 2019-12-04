@@ -3,12 +3,16 @@ public class Produto {
     private String marca;
     private double valor;
     private String distribuidor;
+    private Integer quantidadeEstoque;
+    private Integer quantidadeCompra;
 
-    public Produto(String nome, String marca, double valor, String distribuidor) {
+    public Produto(String nome, String marca, double valor, String distribuidor, Integer estoque, Integer compra) {
         this.nome = nome;
         this.marca = marca;
         this.valor = valor;
         this.distribuidor = distribuidor;
+        this.quantidadeEstoque = estoque;
+        this.quantidadeCompra = compra;
     }
 
     public String getNome() {
@@ -34,10 +38,24 @@ public class Produto {
         this.valor = valor;
     }
 
-    public void getDistribuidor() {
+    public String getDistribuidor() {
         return this.distribuidor;
     }
 
-public void setDistribuidor() {
+    public void setDistribuidor() {
         this.distribuidor = distribuidor;
     }
+    
+    public Integer getEstoque() {
+        return this.quantidadeEstoque;
+    }
+    public void setEstoque(Integer estoque) {
+        this.quantidadeEstoque = estoque;
+    }
+    public Integer getCompra() {
+        return this.quantidadeCompra;
+    }
+    public void setCompra(Integer compra) {
+        this.quantidadeCompra = compra;
+    }
+}

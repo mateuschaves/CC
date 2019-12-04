@@ -20,6 +20,18 @@ public class Main {
         System.out.println("Horario de entrada: " + caixaAtendente.getHorarioEntrada());
         System.out.println("Horario de saida: " + caixaAtendente.getHorarioSaida());
 
+        Produto produto = new Produto("ninho","nestle",48, "vale", 15,7);
+        System.out.println("Nome: " + produto.getNome());
+        System.out.println("Marca: " + produto.getMarca());
+        System.out.println("Preco: " + produto.getValor());
+        System.out.println("distribuidor: " + produto.getDistribuidor());
+        System.out.println("Estoque: " + produto.getEstoque());
+        System.out.println("vendidos: " + produto.getCompra());
+        
+        
+        
+        
+
     }
 
 }
