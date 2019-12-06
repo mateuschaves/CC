@@ -1,10 +1,12 @@
 public class Produto {
+    private Integer id;
     private String nome;
     private String marca;
     private double valor;
     private String distribuidor;
 
-    public Produto(String nome, String marca, double valor, String distribuidor) {
+    public Produto(Integer id, String nome, String marca, double valor, String distribuidor) {
+        this.id = id;
         this.nome = nome;
         this.marca = marca;
         this.valor = valor;
@@ -41,5 +43,13 @@ public class Produto {
 
     public void setDistribuidor(String distribuidor) {
         this.distribuidor = distribuidor;
+    }
+
+    public int getId() {
+        return this.id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

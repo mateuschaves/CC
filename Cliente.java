@@ -5,8 +5,10 @@ public class Cliente extends Pessoa {
     private String Email;
     private String Telefone;
     private String Endereco;
+    private Integer cod;
 
-    public Cliente(String nome, Date dataCadastro, String telefone, String endereco, String cpf) {
+    public Cliente(int cod, String nome, Date dataCadastro, String telefone, String endereco, String cpf) {
+        this.setCod(cod);
         this.setNome(nome);
         this.setDataCadastro(dataCadastro);
         this.setTelefone(telefone);
@@ -14,7 +16,8 @@ public class Cliente extends Pessoa {
         this.setCpf(cpf);
     }
 
-    public Cliente(String nome, String cpf, Date dataCadastro, String email, String telefone, String endereco) {
+    public Cliente(int cod, String nome, String cpf, Date dataCadastro, String email, String telefone, String endereco) { 
+        this.setCod(cod);
         this.setNome(nome);
         this.setCpf(cpf);
         this.setDataCadastro(dataCadastro);
@@ -45,5 +48,12 @@ public class Cliente extends Pessoa {
 
     public void setEndereco(String Endereco) {
         this.Endereco = Endereco;
+    }
+    public Integer getCod() {
+        return this.cod;
+    }
+
+    public void setCod(Integer cod) {
+        this.cod = cod;
     }
 }
