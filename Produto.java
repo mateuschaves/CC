@@ -14,6 +14,7 @@ public class Produto {
     public String getNome() {
         return this.nome;
     }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -25,7 +26,7 @@ public class Produto {
     public void setMarca(String marca) {
         this.marca = marca;
     }
-    
+
     public double getValor() {
         return this.valor;
     }
@@ -34,10 +35,11 @@ public class Produto {
         this.valor = valor;
     }
 
-    public void getDistribuidor() {
+    public String getDistribuidor() {
         return this.distribuidor;
     }
 
-public void setDistribuidor() {
+    public void setDistribuidor(String distribuidor) {
         this.distribuidor = distribuidor;
     }
+}
