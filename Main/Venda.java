@@ -1,3 +1,7 @@
+package Main;
+
+import Clientes.*;
+import Produto.*;
 import java.util.ArrayList;
 import java.util.Date;
 

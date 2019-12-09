@@ -1,3 +1,5 @@
+package Caixa;
+
 public class Caixa {
     private int numero;
     private Boolean preferencia;

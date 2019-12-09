@@ -1,3 +1,5 @@
+package Produto;
+
 import java.util.ArrayList;
 
 public class ProdutoValidador {

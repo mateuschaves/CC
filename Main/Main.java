@@ -1,6 +1,11 @@
+package Main;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import Caixa.*;
+import Clientes.*;
+import Produto.*;
 
 public class Main {
     public static void main(String[] args) {

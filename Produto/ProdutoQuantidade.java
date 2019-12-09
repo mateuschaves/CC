@@ -1,3 +1,5 @@
+package Produto;
+
 public class ProdutoQuantidade {
     private Produto produto;
     private int quantidade;

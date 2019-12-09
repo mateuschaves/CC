@@ -1,3 +1,5 @@
+package Caixa;
+
 import java.util.ArrayList;
 
 public class CaixaRepositorio {
