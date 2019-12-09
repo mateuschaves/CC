@@ -3,8 +3,16 @@ import java.util.ArrayList;
 public class ProdutoRepositorio {
     private ArrayList<Produto> produtos = new ArrayList<Produto>();
 
-    public Produto criar(Produto produto) {
-        this.produtos.add(produto);
+    public Produto criar(Produto produto) throws Exception {
+        ProdutoValidador produtoValidador = new ProdutoValidador(produto, produtos);
+
+        try {
+            produtoValidador.validarId();
+            produtoValidador.validarNome();
+            this.produtos.add(produto);
+        } catch (Exception a) {
+            throw new Exception(a.getMessage());
+        }
         return produto;
     }
 
