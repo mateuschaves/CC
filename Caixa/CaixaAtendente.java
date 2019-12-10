@@ -1,6 +1,6 @@
 package Caixa;
 
-import Main.Pessoa;
+import Pessoa.Pessoa;
 import java.util.Calendar;
 
 public class CaixaAtendente extends Pessoa {

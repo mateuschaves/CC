@@ -1,7 +1,7 @@
 package Clientes;
 
 import java.util.Date;
-import Main.Pessoa;
+import Pessoa.Pessoa;
 
 public class Cliente extends Pessoa {
 
@@ -19,7 +19,8 @@ public class Cliente extends Pessoa {
         this.setCpf(cpf);
     }
 
-    public Cliente(int cod, String nome, String cpf, Date dataCadastro, String email, String telefone, String endereco) { 
+    public Cliente(int cod, String nome, String cpf, Date dataCadastro, String email, String telefone,
+            String endereco) {
         this.setCod(cod);
         this.setNome(nome);
         this.setCpf(cpf);
@@ -52,6 +53,7 @@ public class Cliente extends Pessoa {
     public void setEndereco(String Endereco) {
         this.Endereco = Endereco;
     }
+
     public Integer getCod() {
         return this.cod;
     }

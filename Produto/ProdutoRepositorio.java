@@ -1,21 +1,30 @@
 package Produto;
 
 import java.util.ArrayList;
+import Produto.ProdutoQuantidade;
+import Produto.Estoque;
 
 public class ProdutoRepositorio {
     private ArrayList<Produto> produtos = new ArrayList<Produto>();
+    private Estoque estoque = new Estoque();
 
-    public Produto criar(Produto produto) throws Exception {
+    public Produto criar(Produto produto, int quantidade) throws Exception {
         ProdutoValidador produtoValidador = new ProdutoValidador(produto, produtos);
-
         try {
             produtoValidador.validarId();
             produtoValidador.validarNome();
+            // validar quantidade
             this.produtos.add(produto);
+            this.estoque.adicionar(new ProdutoQuantidade(produto, quantidade));
+
         } catch (Exception a) {
-            throw new Exception(a.getMessage());
+            throw new Exception(a);
         }
         return produto;
+    }
+
+    public Estoque getEstoque() {
+        return this.estoque;
     }
 
     public void remover(int id) {

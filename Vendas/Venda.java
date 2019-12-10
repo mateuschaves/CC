@@ -10,12 +10,21 @@ public class Venda {
     private ArrayList<ProdutoQuantidade> produtos = new ArrayList<ProdutoQuantidade>();
     private Date dataCompra;
     private float precoTotal;
+    private ProdutoRepositorio produtosRepositorioo;
 
-    public Venda(Cliente cliente, ArrayList<ProdutoQuantidade> produtos, Date dataCompra, float precoTotal) {
+    public Venda(Cliente cliente, ArrayList<ProdutoQuantidade> produtos, Date dataCompra, float precoTotal,
+            ProdutoRepositorio produtosRepositorio) {
         this.cliente = cliente;
         this.produtos = produtos;
         this.dataCompra = dataCompra;
         this.precoTotal = precoTotal;
+        this.produtosRepositorioo = produtosRepositorio;
+
+        try {
+            this.produtosRepositorioo.getEstoque().processarVenda(produtos);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public Cliente getCliente() {

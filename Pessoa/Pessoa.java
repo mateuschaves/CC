@@ -1,4 +1,4 @@
-package Main;
+package Pessoa;
 
 import java.util.Date;
 
