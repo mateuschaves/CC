@@ -1,4 +1,4 @@
-package Main;
+package Vendas;
 
 import Clientes.*;
 import Produto.*;
@@ -10,9 +10,6 @@ public class Venda {
     private ArrayList<ProdutoQuantidade> produtos = new ArrayList<ProdutoQuantidade>();
     private Date dataCompra;
     private float precoTotal;
-
-    public Venda() {
-    }
 
     public Venda(Cliente cliente, ArrayList<ProdutoQuantidade> produtos, Date dataCompra, float precoTotal) {
         this.cliente = cliente;

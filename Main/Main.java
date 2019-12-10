@@ -6,6 +6,7 @@ import java.util.Date;
 import Caixa.*;
 import Clientes.*;
 import Produto.*;
+import Vendas.*;
 
 public class Main {
     public static void main(String[] args) {
