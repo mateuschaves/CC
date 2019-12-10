@@ -1,6 +1,10 @@
 package Produto;
 
-public class Estoque extends Produto {
+import java.util.ArrayList;
+
+public class Estoque {
+    
+    private ArrayList<Produto> estoqueProdutos = new ArrayList<Produto>();
 
     
  

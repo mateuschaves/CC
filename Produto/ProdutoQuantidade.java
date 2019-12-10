@@ -9,9 +9,6 @@ public class ProdutoQuantidade {
         this.quantidade = quantidade;
     }
 
-    public ProdutoQuantidade() {
-    }
-
     public Produto getProduto() {
         return this.produto;
     }
