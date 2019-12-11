@@ -28,7 +28,7 @@ public class ProdutoRepositorio implements ProdutoInterface {
             produtoValidador.validarDistribuidor();
             this.produtos.add(produto);
             this.estoque.adicionar(new ProdutoQuantidade(produto, quantidade));
-            this.ranking.adicionarProduto(new ProdutoQuantidade(produto, quantidade));
+            this.ranking.adicionarProduto(new ProdutoQuantidade(produto, 0));
 
         } catch (Exception a) {
             throw new Exception(a);

@@ -25,7 +25,6 @@ public class ProdutoValidador {
             if (this.produto.getId() == produto.getId())
                 throw new Exception("Produto já existe !");
         }
-
     }
 
     public void validarNome() throws Exception {

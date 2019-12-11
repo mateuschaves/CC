@@ -6,15 +6,6 @@ public class Ranking {
 
     private ArrayList<ProdutoQuantidade> produtosVendidos = new ArrayList<ProdutoQuantidade>();
 
-    public void atualizarProduto(ProdutoQuantidade produto) {
-        for (ProdutoQuantidade produtoQuantidade : this.produtosVendidos) {
-            if (produtoQuantidade.getProduto().getId() == produto.getProduto().getId()) {
-                produtosVendidos.get(produtosVendidos.indexOf(produto)).somarQuantidade(produto.getQuantidade());
-            }
-        }
-        bubbleSort(this.produtosVendidos);
-    }
-
     public void bubbleSort(ArrayList<ProdutoQuantidade> produtosVendidos) {
         int n = produtosVendidos.size();
         ProdutoQuantidade temp = new ProdutoQuantidade();
@@ -29,6 +20,15 @@ public class Ranking {
             }
         }
 
+    }
+
+    public void atualizarProduto(ProdutoQuantidade produto) {
+        for (ProdutoQuantidade produtoQuantidade : this.produtosVendidos) {
+            if (produtoQuantidade.getProduto().getId() == produto.getProduto().getId()) {
+                produtosVendidos.get(produtosVendidos.indexOf(produto)).somarQuantidade(produto.getQuantidade());
+            }
+        }
+        bubbleSort(this.produtosVendidos);
     }
 
     public void adicionarProduto(ProdutoQuantidade produto) {
