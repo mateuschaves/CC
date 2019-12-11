@@ -4,10 +4,11 @@ import java.util.Date;
 
 public class Cliente extends Pessoa {
 
+    private Integer cod;
     private String Email;
     private String Telefone;
     private String Endereco;
-    private Integer cod;
+    
 
     public Cliente(int cod, String nome, Date dataCadastro, String telefone, String endereco, String cpf) {
         this.setCod(cod);

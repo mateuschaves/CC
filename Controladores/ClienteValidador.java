@@ -33,20 +33,35 @@ public class ClienteValidador {
             throw new Exception("Preencha o nome do cliente!");
 
     }
+
     public void validarcpf() throws Exception {
         if (this.cliente.getCpf().length() == 0)
-            throw new Exception("Preencha o Cpf!");
-    
+            throw new Exception("Preencha o CPF!");
+        for (Cliente cliente : clientes) {
+            if (this.cliente.getCpf() == cliente.getCpf())
+                throw new Exception("CPF já existe!");
+        }
+
     }
 
     public void validarTelefone() throws Exception {
+        if (this.cliente.getTelefone().length() == 0)
+            throw new Exception("Preencha o telefone!");
         for (Cliente cliente : clientes) {
             if (this.cliente.getTelefone() == cliente.getTelefone())
-                throw new Exception("telefone já existe!");
+                throw new Exception("Telefone já existe!");
         }
 
-}
+    }
+
+    public void validarEmail() throws Exception {
+        if (this.cliente.getEmail().length() == 0)
+            throw new Exception("Preencha o email!");
+    }
+
+    public void validarEndereco() throws Exception {
+        if (this.cliente.getEndereco().length() == 0)
+            throw new Exception("Preencha o endereço!");
+    }
 
 }
-
-

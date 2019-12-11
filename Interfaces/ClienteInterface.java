@@ -6,13 +6,13 @@ import Modelos.*;
 
 public interface ClienteInterface {
 
-    public Cliente FazerCompra(Cliente compra);
+    public Cliente CadastrarCliente(Cliente cliente);
 
-    public Cliente RemoverCompra(int cod);
+    public Cliente RemoverCliente(int cod);
 
-    public Cliente MostrarCompra(int cod);
+    public Cliente MostrarCliente(int cod);
 
-    public Cliente AtualizarCompra(int cod, Cliente compraAtualizada);
+    public Cliente AtualizarCliente(int cod, Cliente clienteAtualizado);
 
-    public ArrayList<Cliente> ListarCompras();
+    public ArrayList<Cliente> ListarClientes();
 }

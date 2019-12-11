@@ -34,4 +34,22 @@ public class ProdutoValidador {
 
     }
 
+    public void validarMarca() throws Exception {
+        if (this.produto.getMarca().length() == 0)
+            throw new Exception("Preencha a marca do produto !");
+
+    }
+
+    public void validarValor() throws Exception {
+        if (this.produto.getValor() <= 0)
+            throw new Exception("O valor precisa ser maior que zero !");
+
+    }
+
+    public void validarDistribuidor() throws Exception {
+        if (this.produto.getDistribuidor().length() == 0)
+            throw new Exception("Preencha o distribuidor do produto !");
+
+    }
+
 }

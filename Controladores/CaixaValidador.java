@@ -23,13 +23,13 @@ public class CaixaValidador {
         this.caixa = caixa;
     }
 
-    public void validarnumero(){
+    public void validarNumero(){
         for (Caixa caixa : caixas) {
             if (this.caixa.getNumero() == caixa.getNumero())
                 throw new Exception("Só existe um caixa com esse número!");
         }
     }
-    public void validartipo(){
+    public void validarTipo(){
         if(this.caixa.getPreferencia() == true  &&  this.caixa.getPequenasCompras() == true ){
             throw new Exception("O caixa só pode ser de um tipo!");
         }
