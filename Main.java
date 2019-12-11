@@ -36,11 +36,11 @@ public class Main {
                 Produto arroz = new Produto(4, "Arroz Emoções", "Emoções", 4.50, "vitarela");
                 Produto macarrao = new Produto(5, "Espaguete", "vitarela", 3.50, "vitarela");
                 try {
-                        produtoss.criar(ninho, 1);
-                        produtoss.criar(miojo, 3);
-                        produtoss.criar(feijao, 50);
-                        produtoss.criar(arroz, 25);
-                        produtoss.criar(macarrao, 100);
+                        produtoss.adicionarProdutoEstoque(ninho, 1);
+                        produtoss.adicionarProdutoEstoque(miojo, 3);
+                        produtoss.adicionarProdutoEstoque(feijao, 50);
+                        produtoss.adicionarProdutoEstoque(arroz, 25);
+                        produtoss.adicionarProdutoEstoque(macarrao, 100);
 
                 } catch (Exception e) {
                         System.out.println(e);

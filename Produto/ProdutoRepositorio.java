@@ -3,12 +3,17 @@ package Produto;
 import java.util.ArrayList;
 import Produto.ProdutoQuantidade;
 import Produto.Estoque;
+import Interfaces.ProdutoInterce;
 
-public class ProdutoRepositorio {
+public class ProdutoRepositorio implements ProdutoInterface {
     private ArrayList<Produto> produtos = new ArrayList<Produto>();
     private Estoque estoque = new Estoque();
 
-    public Produto criar(Produto produto, int quantidade) throws Exception {
+    public Estoque getEstoque() {
+        return this.estoque;
+    }
+
+    public Produto adicionarProdutoEstoque(Produto produto, int quantidade) throws Exception {
         ProdutoValidador produtoValidador = new ProdutoValidador(produto, produtos);
         try {
             produtoValidador.validarId();
@@ -23,11 +28,7 @@ public class ProdutoRepositorio {
         return produto;
     }
 
-    public Estoque getEstoque() {
-        return this.estoque;
-    }
-
-    public void remover(int id) {
+    public void removerProdutoEstoque(int id) {
         int count = 0;
         for (Produto produto : produtos) {
             if (produto.getId() == id) {
@@ -38,7 +39,7 @@ public class ProdutoRepositorio {
 
     }
 
-    public Produto atualizar(int id, Produto produtoUpdate) {
+    public Produto atualizarProdutoEstoque(int id, Produto produtoUpdate) {
         int count = 0;
         for (Produto produto : produtos) {
             if (produto.getId() == id) {
@@ -50,7 +51,7 @@ public class ProdutoRepositorio {
         return null;
     }
 
-    public Produto mostrar(int id) {
+    public Produto mostrarProdutoEstoque(int id) {
         int count = 0;
         for (Produto produto : produtos) {
             if (produto.getId() == id) {
@@ -62,7 +63,7 @@ public class ProdutoRepositorio {
         return null;
     }
 
-    public ArrayList<Produto> listar() {
+    public ArrayList<Produto> listarProdutoEstoque() {
         return this.produtos;
     }
 

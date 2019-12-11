@@ -1,14 +1,17 @@
-import java.util.ArrayList;
+package Clientes;
 
-public class ClienteRepositorio {
+import java.util.ArrayList;
+import Interfaces.ClienteInterface;
+
+public class ClienteRepositorio implements ClienteInterface{
     ArrayList<Cliente> compras = new ArrayList<Cliente>();
 
-    public Cliente criar(Cliente compra) {
+    public Cliente FazerCompra(Cliente compra) {
         this.compras.add(compra);
         return compra;
     }
     
-    public Cliente remover(int cod) {
+    public Cliente RemoverCompra(int cod) {
         int count = 0;
         for (Cliente compra : compras) {
             if (compra.getCod() == cod) {
@@ -19,7 +22,7 @@ public class ClienteRepositorio {
         return null;
     }
     
-    public Cliente mostrar(int cod) {
+    public Cliente MostrarCompra(int cod) {
         int count = 0;
         for (Cliente compra : compras) {
             if (compra.getCod() == cod) {
@@ -31,7 +34,7 @@ public class ClienteRepositorio {
         return null;
     }
     
-    public Cliente atualizar(int cod, Cliente compraAtualizada) {
+    public Cliente AtualizarCompra(int cod, Cliente compraAtualizada) {
         int count = 0;
         for (Cliente compra : compras) {
             if (compra.getCod() == cod) {
@@ -43,7 +46,7 @@ public class ClienteRepositorio {
         return null;
     }
     
-    public ArrayList<Cliente> listar() {
+    public ArrayList<Cliente> ListarCompras() {
         return this.compras;
     }
 }
