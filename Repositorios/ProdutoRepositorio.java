@@ -8,9 +8,14 @@ import Controladores.*;
 public class ProdutoRepositorio implements ProdutoInterface {
     private ArrayList<Produto> produtos = new ArrayList<Produto>();
     private Estoque estoque = new Estoque();
+    private Ranking ranking = new Ranking();
 
     public Estoque getEstoque() {
         return this.estoque;
+    }
+
+    public Ranking getRanking() {
+        return this.ranking;
     }
 
     public Produto adicionarProdutoEstoque(Produto produto, int quantidade) throws Exception {
@@ -18,9 +23,9 @@ public class ProdutoRepositorio implements ProdutoInterface {
         try {
             produtoValidador.validarId();
             produtoValidador.validarNome();
-            // validar quantidade
             this.produtos.add(produto);
             this.estoque.adicionar(new ProdutoQuantidade(produto, quantidade));
+            this.ranking.adicionarProduto(new ProdutoQuantidade(produto, quantidade));
 
         } catch (Exception a) {
             throw new Exception(a);

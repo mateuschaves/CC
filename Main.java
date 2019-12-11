@@ -36,7 +36,9 @@ public class Main {
                         produtoss.adicionarProdutoEstoque(miojo, 3);
                         produtoss.adicionarProdutoEstoque(feijao, 50);
                         produtoss.adicionarProdutoEstoque(arroz, 25);
-                        produtoss.adicionarProdutoEstoque(macarrao, 100);
+                        produtoss.adicionarProdutoEstoque(macarrao, 2);
+
+                        System.out.println(produtoss.getRanking().listar().get(1).getProduto().getNome());
 
                 } catch (Exception e) {
                         System.out.println(e);

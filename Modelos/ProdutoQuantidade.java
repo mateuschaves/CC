@@ -9,12 +9,20 @@ public class ProdutoQuantidade {
         this.quantidade = quantidade;
     }
 
+    public ProdutoQuantidade() {
+
+    }
+
     public Produto getProduto() {
         return this.produto;
     }
 
     public void setProduto(Produto produto) {
         this.produto = produto;
+    }
+
+    public void somarQuantidade(int quantidade) {
+        this.quantidade++;
     }
 
     public int getQuantidade() {
