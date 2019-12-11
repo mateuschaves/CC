@@ -5,25 +5,35 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Venda {
+    private int id;
     private Cliente cliente;
     private ArrayList<ProdutoQuantidade> produtos = new ArrayList<ProdutoQuantidade>();
     private Date dataCompra;
     private float precoTotal;
     private ProdutoRepositorio produtosRepositorioo;
 
-    public Venda(Cliente cliente, ArrayList<ProdutoQuantidade> produtos, Date dataCompra, float precoTotal,
-            ProdutoRepositorio produtosRepositorio) {
+    public Venda(int id, Cliente cliente, ArrayList<ProdutoQuantidade> produtos, Date dataCompra, float precoTotal,
+            ProdutoRepositorio produtosRepositorioo) {
+        this.id = id;
         this.cliente = cliente;
         this.produtos = produtos;
         this.dataCompra = dataCompra;
         this.precoTotal = precoTotal;
-        this.produtosRepositorioo = produtosRepositorio;
+        this.produtosRepositorioo = produtosRepositorioo;
 
         try {
             this.produtosRepositorioo.getEstoque().processarVenda(produtos);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    public int getId() {
+        return this.id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Cliente getCliente() {

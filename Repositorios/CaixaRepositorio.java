@@ -1,17 +1,18 @@
 package Repositorios;
 
 import java.util.ArrayList;
+import Interfaces.CaixaInterface;
 import Modelos.Caixa;
 
-public class CaixaRepositorio {
+public class CaixaRepositorio implements CaixaInterface {
     private ArrayList<Caixa> caixas = new ArrayList<Caixa>();
 
-    public Caixa RealizarVenda(Caixa caixa) {
+    public Caixa CriarCaixa(Caixa caixa) {
         this.caixas.add(caixa);
         return caixa;
     }
 
-    public void CancelarVenda(int numero) {
+    public void FecharCaixa(int numero) {
         int count = 0;
         for (Caixa caixa : caixas) {
             if (caixa.getNumero() == numero) {
@@ -22,7 +23,7 @@ public class CaixaRepositorio {
 
     }
 
-    public Caixa AtualizarVenda(int numero, Caixa caixaUpdated) {
+    public Caixa AtualizarCaixa(int numero, Caixa caixaUpdated) {
         int count = 0;
         for (Caixa caixa : caixas) {
             if (caixa.getNumero() == numero) {
@@ -34,7 +35,7 @@ public class CaixaRepositorio {
         return null;
     }
 
-    public Caixa MostrarVenda(int numero) {
+    public Caixa MostrarCaixa(int numero) {
         int count = 0;
         for (Caixa caixa : caixas) {
             if (caixa.getNumero() == numero) {
@@ -46,7 +47,7 @@ public class CaixaRepositorio {
         return null;
     }
 
-    public ArrayList<Caixa> ListarVendas() {
+    public ArrayList<Caixa> ListarCaixas() {
         return this.caixas;
     }
 

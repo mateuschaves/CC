@@ -6,14 +6,14 @@ import Modelos.*;
 
 public interface CaixaInterface {
 
-    public Caixa RealizarVenda(Caixa caixa);
+    public Caixa CriarCaixa(Caixa caixa);
 
-    public void CancelarVenda(int numero);
+    public void FecharCaixa(int numero);
 
-    public Caixa AtualizarVenda(int numero, Caixa caixaUpdated);
+    public Caixa AtualizarCaixa(int numero, Caixa caixaUpdated);
 
-    public Caixa MostrarVenda(int numero);
+    public Caixa MostrarCaixa(int numero);
 
-    public ArrayList<Caixa> ListarVendas();
+    public ArrayList<Caixa> ListarCaixas();
 
 }

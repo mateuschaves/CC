@@ -36,7 +36,9 @@ public class Main {
                         produtoss.adicionarProdutoEstoque(miojo, 3);
                         produtoss.adicionarProdutoEstoque(feijao, 50);
                         produtoss.adicionarProdutoEstoque(arroz, 25);
-                        produtoss.adicionarProdutoEstoque(macarrao, 100);
+                        produtoss.adicionarProdutoEstoque(macarrao, 2);
+
+                        System.out.println(produtoss.getRanking().listar().get(1).getProduto().getNome());
 
                 } catch (Exception e) {
                         System.out.println(e);
@@ -68,7 +70,13 @@ public class Main {
                 produtos.add(produtoQuantidade);
                 produtos.add(produtoQuantidade2);
 
-                Venda venda = new Venda(cliente, produtos, new Date(), 10, produtoss);
+                VendasRepositorio vendas = new VendasRepositorio();
+                vendas.adicionarVenda(new Venda(1, cliente, produtos, new Date(), 10, produtoss));
+                vendas.adicionarVenda(new Venda(2, cliente, produtos, new Date(), 111, produtoss));
+
+                System.out.println(vendas.listar());
+                vendas.cancelarVenda(1);
+                System.out.println(vendas.listar());
 
                 System.out.println("\n");
                 try {
