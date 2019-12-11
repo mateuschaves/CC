@@ -3,7 +3,7 @@ package Produto;
 import java.util.ArrayList;
 import Produto.ProdutoQuantidade;
 import Produto.Estoque;
-import Interfaces.ProdutoInterce;
+import Interfaces.ProdutoInterface;
 
 public class ProdutoRepositorio implements ProdutoInterface {
     private ArrayList<Produto> produtos = new ArrayList<Produto>();

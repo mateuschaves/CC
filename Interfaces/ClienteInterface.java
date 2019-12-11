@@ -1,3 +1,9 @@
+package Interfaces;
+
+import java.util.ArrayList;
+
+import Clientes.Cliente;
+
 public interface ClienteInterface {
 
     public Cliente FazerCompra(Cliente compra);

@@ -1,8 +1,15 @@
+package Interfaces;
+
+import java.util.ArrayList;
+
+import Produto.Estoque;
+import Produto.Produto;
+
 public interface ProdutoInterface {
 
     public Estoque getEstoque();
 
-    public Produto adicionarProdutoEstoque(Produto produto, int quantidade);
+    public Produto adicionarProdutoEstoque(Produto produto, int quantidade) throws Exception;
 
     public void removerProdutoEstoque(int id);
 
