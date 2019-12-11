@@ -70,7 +70,13 @@ public class Main {
                 produtos.add(produtoQuantidade);
                 produtos.add(produtoQuantidade2);
 
-                Venda venda = new Venda(cliente, produtos, new Date(), 10, produtoss);
+                VendasRepositorio vendas = new VendasRepositorio();
+                vendas.adicionarVenda(new Venda(1, cliente, produtos, new Date(), 10, produtoss));
+                vendas.adicionarVenda(new Venda(2, cliente, produtos, new Date(), 111, produtoss));
+
+                System.out.println(vendas.listar());
+                vendas.cancelarVenda(1);
+                System.out.println(vendas.listar());
 
                 System.out.println("\n");
                 try {
