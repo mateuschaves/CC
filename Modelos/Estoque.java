@@ -36,7 +36,7 @@ public class Estoque {
                 return this.estoqueProdutos.get(this.estoqueProdutos.indexOf(produto));
             }
         }
-        return null;
+        return this.estoqueProdutos.get(0);
     }
 
     public ArrayList<ProdutoQuantidade> listar() {

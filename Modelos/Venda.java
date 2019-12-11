@@ -23,7 +23,20 @@ public class Venda {
 
         try {
             this.produtosRepositorioo.getEstoque().processarVenda(produtos);
+
         } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+            System.out.println(produtos);
+            for (ProdutoQuantidade produtoQuantidade : produtos) {
+                this.produtosRepositorioo.getRanking().atualizarProduto(produtoQuantidade);
+            }
+        } catch (Exception e) {
+            System.out.println("e.getMessage()");
+
             System.out.println(e.getMessage());
         }
     }

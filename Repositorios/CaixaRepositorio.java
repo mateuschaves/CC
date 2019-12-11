@@ -13,36 +13,30 @@ public class CaixaRepositorio implements CaixaInterface {
     }
 
     public void FecharCaixa(int numero) {
-        int count = 0;
-        for (Caixa caixa : caixas) {
+        for (Caixa caixa : this.caixas) {
             if (caixa.getNumero() == numero) {
-                caixas.remove(count);
+                this.caixas.remove(caixa);
             }
-            count = count + 1;
         }
 
     }
 
     public Caixa AtualizarCaixa(int numero, Caixa caixaUpdated) {
-        int count = 0;
-        for (Caixa caixa : caixas) {
+        for (Caixa caixa : this.caixas) {
             if (caixa.getNumero() == numero) {
-                caixas.set(count, caixaUpdated);
-                return caixas.get(count);
+                this.caixas.set(this.caixas.indexOf(caixa), caixaUpdated);
+                return this.caixas.get(this.caixas.indexOf(caixa));
             }
-            count = count + 1;
         }
         return null;
     }
 
     public Caixa MostrarCaixa(int numero) {
-        int count = 0;
-        for (Caixa caixa : caixas) {
+        for (Caixa caixa : this.caixas) {
             if (caixa.getNumero() == numero) {
-                caixas.get(count);
-                return caixas.get(count);
+                this.caixas.get(this.caixas.indexOf(caixa));
+                return this.caixas.get(this.caixas.indexOf(caixa));
             }
-            count = count + 1;
         }
         return null;
     }

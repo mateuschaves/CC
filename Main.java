@@ -120,6 +120,9 @@ public class Main {
                 System.out.println("Cancelando uma venda de cod 1... ");
                 vendas.cancelarVenda(1);
 
+                System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                System.out.println(vendas.listar());
+
                 // System.out.println("Cliente: " + venda.getCliente().getNome());
                 // System.out.println("Produto: " +
                 // venda.getProdutos().get(0).getProduto().getNome() + " x"

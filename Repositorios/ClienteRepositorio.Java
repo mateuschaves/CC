@@ -12,36 +12,30 @@ public class ClienteRepositorio implements ClienteInterface{
     }
     
     public Cliente RemoverCliente(int cod) {
-        int count = 0;
-        for (Cliente clientes : clientes) {
-            if (clientes.getCod() == cod) {
-                clientess.remove(count);
+        for (Cliente cliente : this.clientes) {
+            if (cliente.getCod() == cod) {
+                this.clientes.remove(this.clientes.indexOf(cliente));
             }
-            count = count + 1;
         }
         return null;
     }
     
     public Cliente MostrarCliente(int cod) {
-        int count = 0;
-        for (Cliente clientes : clientes) {
-            if (clientes.getCod() == cod) {
-                clientes.get(count);
-                return clientes.get(count);
+        for (Cliente cliente : this.clientes) {
+            if (cliente.getCod() == cod) {
+                this.clientes.get(this.clientes.indexOf(cliente));
+                return this.clientes.get(this.clientes.indexOf(cliente));
             }
-            count = count + 1;
         }
         return null;
     }
     
     public Cliente AtualizarCliente(int cod, Cliente clienteAtualizado) {
-        int count = 0;
-        for (Cliente clientes : clientes) {
-            if (clientes.getCod() == cod) {
-                clientes.set(count, clienteAtualizado);
-                return clientes.get(count);
+        for (Cliente cliente : this.clientes) {
+            if (cliente.getCod() == cod) {
+                this.clientes.set(this.clientes.indexOf(cliente), clienteAtualizado);
+                return this.clientes.get(this.clientes.index(cliente));
             }
-            count = count + 1;
         }
         return null;
     }

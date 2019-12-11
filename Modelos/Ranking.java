@@ -23,10 +23,12 @@ public class Ranking {
     }
 
     public void atualizarProduto(ProdutoQuantidade produto) {
+        int contador = 0;
         for (ProdutoQuantidade produtoQuantidade : this.produtosVendidos) {
             if (produtoQuantidade.getProduto().getId() == produto.getProduto().getId()) {
-                produtosVendidos.get(produtosVendidos.indexOf(produto)).somarQuantidade(produto.getQuantidade());
+                this.produtosVendidos.get(contador).somarQuantidade(produto.getQuantidade());
             }
+            contador++;
         }
         bubbleSort(this.produtosVendidos);
     }
