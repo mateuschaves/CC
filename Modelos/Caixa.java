@@ -1,4 +1,4 @@
-package Caixa;
+package Modelos;
 
 public class Caixa {
     private int numero;

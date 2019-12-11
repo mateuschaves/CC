@@ -2,7 +2,7 @@ package Interfaces;
 
 import java.util.ArrayList;
 
-import Clientes.Cliente;
+import Modelos.*;
 
 public interface ClienteInterface {
 

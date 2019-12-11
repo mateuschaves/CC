@@ -1,7 +1,6 @@
-package Vendas;
+package Modelos;
 
-import Clientes.*;
-import Produto.*;
+import Repositórios.*;
 import java.util.ArrayList;
 import java.util.Date;
 

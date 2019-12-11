@@ -1,16 +1,17 @@
-package Caixa;
+package Repositórios;
 
 import java.util.ArrayList;
+import Modelos.Caixa;
 
 public class CaixaRepositorio {
     private ArrayList<Caixa> caixas = new ArrayList<Caixa>();
 
-    public Caixa criar(Caixa caixa) {
+    public Caixa RealizarVenda(Caixa caixa) {
         this.caixas.add(caixa);
         return caixa;
     }
 
-    public void remover(int numero) {
+    public void CancelarVenda(int numero) {
         int count = 0;
         for (Caixa caixa : caixas) {
             if (caixa.getNumero() == numero) {
@@ -21,7 +22,7 @@ public class CaixaRepositorio {
 
     }
 
-    public Caixa atualizar(int numero, Caixa caixaUpdated) {
+    public Caixa AtualizarVenda(int numero, Caixa caixaUpdated) {
         int count = 0;
         for (Caixa caixa : caixas) {
             if (caixa.getNumero() == numero) {
@@ -33,7 +34,7 @@ public class CaixaRepositorio {
         return null;
     }
 
-    public Caixa mostrar(int numero) {
+    public Caixa MostrarVenda(int numero) {
         int count = 0;
         for (Caixa caixa : caixas) {
             if (caixa.getNumero() == numero) {
@@ -45,7 +46,7 @@ public class CaixaRepositorio {
         return null;
     }
 
-    public ArrayList<Caixa> listar() {
+    public ArrayList<Caixa> ListarVendas() {
         return this.caixas;
     }
 

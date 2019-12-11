@@ -1,4 +1,4 @@
-package Produto;
+package Repositórios;
 
 import java.util.ArrayList;
 import Produto.ProdutoQuantidade;

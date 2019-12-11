@@ -1,7 +1,6 @@
-package Clientes;
+package Modelos;
 
 import java.util.Date;
-import Pessoa.Pessoa;
 
 public class Cliente extends Pessoa {
 

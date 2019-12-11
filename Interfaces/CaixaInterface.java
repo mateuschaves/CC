@@ -2,7 +2,7 @@ package Interfaces;
 
 import java.util.ArrayList;
 
-import Caixa.Caixa;
+import Modelos.*;
 
 public interface CaixaInterface {
 

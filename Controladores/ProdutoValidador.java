@@ -1,6 +1,7 @@
-package Produto;
+package Controladores;
 
 import java.util.ArrayList;
+import Modelos.*;
 
 public class ProdutoValidador {
     private Produto produto;

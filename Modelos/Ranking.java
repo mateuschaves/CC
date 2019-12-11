@@ -1,7 +1,6 @@
-package Vendas;
+package Modelos;
 
 import java.util.ArrayList;
-import Vendas.Venda;
 
 public class Ranking {
 

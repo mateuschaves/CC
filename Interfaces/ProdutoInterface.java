@@ -2,8 +2,7 @@ package Interfaces;
 
 import java.util.ArrayList;
 
-import Produto.Estoque;
-import Produto.Produto;
+import Modelos.*;
 
 public interface ProdutoInterface {
 
