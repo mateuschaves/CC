@@ -4,7 +4,6 @@ import java.util.Date;
 
 import Modelos.*;
 import Repositorios.*;
-import sun.swing.icon.SortArrowIcon;
 
 public class Main {
         public static void main(String[] args) {
@@ -44,7 +43,7 @@ public class Main {
                 Produto arroz = new Produto(4, "Arroz Emoções", "Emoções", 4.50, "vitarela");
                 Produto macarrao = new Produto(5, "Espaguete", "vitarela", 3.50, "vitarela");
                 Produto sushi = new Produto(6, "Sushi", "Japão", 12.0, "vitarela");
-                Produto paçoca = new Produto(7, "Paçoca", "vitarela", 2.0, "vitarela");
+                Produto pacoca = new Produto(7, "Paçoca", "vitarela", 2.0, "vitarela");
                 Produto feijoada = new Produto(8, "Feijoada", "vitarela", 50, "vitarela");
                 Produto pizza = new Produto(9, "Pizza", "Domino's", 29.0, "vitarela");
                 Produto temaki = new Produto(10, "Temaki", "Eiji", 55, "vitarela");
@@ -55,10 +54,15 @@ public class Main {
                         produtoss.adicionarProdutoEstoque(arroz, 25);
                         produtoss.adicionarProdutoEstoque(macarrao, 60);
                         produtoss.adicionarProdutoEstoque(sushi, 29);
-                        produtoss.adicionarProdutoEstoque(paçoca, 35);
+                        produtoss.adicionarProdutoEstoque(pacoca, 35);
                         produtoss.adicionarProdutoEstoque(feijoada, 7);
                         produtoss.adicionarProdutoEstoque(pizza, 100);
                         produtoss.adicionarProdutoEstoque(temaki, 6);
+
+                        // produtoss.removerProdutoEstoque(2);
+
+                        produtoss.atualizarProdutoEstoque(10, new ProdutoQuantidade(
+                                        new Produto(10, "Temaki", "Mateus", 100, "vitarela"), 10));
 
                 } catch (Exception e) {
                         System.out.println(e);
@@ -110,15 +114,11 @@ public class Main {
                 vendas.adicionarVenda(new Venda(3, cliente3, produtosCliente3, new Date(), 40, produtoss));
                 vendas.adicionarVenda(new Venda(4, cliente2, produtosCliente3, new Date(), 24, produtoss));
 
-
                 System.out.println("Listando Vendas feitas: ");
                 System.out.println(vendas.listar());
 
                 System.out.println("Cancelando uma venda de cod 1... ");
                 vendas.cancelarVenda(1);
-                System.out.println(vendas.listar());
-
-                System.out.println("\n");
 
                 // System.out.println("Cliente: " + venda.getCliente().getNome());
                 // System.out.println("Produto: " +

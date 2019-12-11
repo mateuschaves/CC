@@ -10,6 +10,35 @@ public class Estoque {
         this.estoqueProdutos.add(produtoQuantidade);
     }
 
+    public void remover(int id) {
+        for (ProdutoQuantidade produto : this.estoqueProdutos) {
+            if (produto.getProduto().getId() == id) {
+                this.estoqueProdutos.remove(produto);
+                break;
+            }
+        }
+
+    }
+
+    public ProdutoQuantidade mostrar(int id) {
+        for (ProdutoQuantidade produto : this.estoqueProdutos) {
+            if (produto.getProduto().getId() == id) {
+                return this.estoqueProdutos.get(this.estoqueProdutos.indexOf(produto));
+            }
+        }
+        return null;
+    }
+
+    public ProdutoQuantidade atualizar(int id, ProdutoQuantidade produtoUpdate) {
+        for (ProdutoQuantidade produto : this.estoqueProdutos) {
+            if (produto.getProduto().getId() == id) {
+                this.estoqueProdutos.set(this.estoqueProdutos.indexOf(produto), produtoUpdate);
+                return this.estoqueProdutos.get(this.estoqueProdutos.indexOf(produto));
+            }
+        }
+        return null;
+    }
+
     public ArrayList<ProdutoQuantidade> listar() {
         return this.estoqueProdutos;
     }

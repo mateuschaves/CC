@@ -12,9 +12,9 @@ public interface ProdutoInterface {
 
     public void removerProdutoEstoque(int id);
 
-    public Produto atualizarProdutoEstoque(int id, Produto produtoUpdate);
+    public ProdutoQuantidade atualizarProdutoEstoque(int id, ProdutoQuantidade produtoUpdate);
 
-    public Produto mostrarProdutoEstoque(int id);
+    public ProdutoQuantidade mostrarProdutoEstoque(int id);
 
     public ArrayList<Produto> listarProdutoEstoque();
 

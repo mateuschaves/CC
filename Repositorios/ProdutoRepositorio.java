@@ -37,38 +37,15 @@ public class ProdutoRepositorio implements ProdutoInterface {
     }
 
     public void removerProdutoEstoque(int id) {
-        int count = 0;
-        for (Produto produto : produtos) {
-            if (produto.getId() == id) {
-                produtos.remove(count);
-            }
-            count = count + 1;
-        }
-
+        this.estoque.remover(id);
     }
 
-    public Produto atualizarProdutoEstoque(int id, Produto produtoUpdate) {
-        int count = 0;
-        for (Produto produto : produtos) {
-            if (produto.getId() == id) {
-                produtos.set(count, produtoUpdate);
-                return produtos.get(count);
-            }
-            count = count + 1;
-        }
-        return null;
+    public ProdutoQuantidade atualizarProdutoEstoque(int id, ProdutoQuantidade produtoUpdate) {
+        return this.estoque.atualizar(id, produtoUpdate);
     }
 
-    public Produto mostrarProdutoEstoque(int id) {
-        int count = 0;
-        for (Produto produto : produtos) {
-            if (produto.getId() == id) {
-                produtos.get(count);
-                return produtos.get(count);
-            }
-            count = count + 1;
-        }
-        return null;
+    public ProdutoQuantidade mostrarProdutoEstoque(int id) {
+        return this.estoque.mostrar(id);
     }
 
     public ArrayList<Produto> listarProdutoEstoque() {

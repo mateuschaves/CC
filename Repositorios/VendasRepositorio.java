@@ -11,12 +11,11 @@ public class VendasRepositorio {
     }
 
     public void cancelarVenda(int id) {
-        int count = 0;
         for (Venda venda : this.vendas) {
             if (venda.getId() == id) {
-                vendas.remove(count);
+                this.vendas.remove(venda);
+                break;
             }
-            count = count + 1;
         }
     }
 

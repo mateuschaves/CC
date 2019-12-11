@@ -2,8 +2,6 @@ package Controladores;
 
 import java.util.ArrayList;
 
-import org.graalvm.compiler.core.common.type.ArithmeticOpTable.BinaryOp.And;
-
 import Modelos.*;
 
 public class CaixaValidador {
@@ -23,14 +21,15 @@ public class CaixaValidador {
         this.caixa = caixa;
     }
 
-    public void validarNumero(){
+    public void validarNumero() throws Exception {
         for (Caixa caixa : caixas) {
             if (this.caixa.getNumero() == caixa.getNumero())
                 throw new Exception("Só existe um caixa com esse número!");
         }
     }
-    public void validarTipo(){
-        if(this.caixa.getPreferencia() == true  &&  this.caixa.getPequenasCompras() == true ){
+
+    public void validarTipo() throws Exception {
+        if (this.caixa.getPreferencia() == true && this.caixa.getPequenasCompras() == true) {
             throw new Exception("O caixa só pode ser de um tipo!");
         }
 

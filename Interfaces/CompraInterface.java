@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import Modelos.*;
 
-public interface ClienteInterface {
+public interface CompraInterface {
 
     public Cliente FazerCompra(Cliente compra);
 
