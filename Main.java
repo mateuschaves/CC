@@ -1,10 +1,9 @@
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import Caixa.*;
-import Clientes.*;
-import Produto.*;
-import Vendas.*;
+
+import Modelos.*;
+import Repositorios.*;
 
 public class Main {
         public static void main(String[] args) {
@@ -21,9 +20,6 @@ public class Main {
 
                 Cliente cliente = new Cliente(1, "Mateus Henrique", new Date(), "81 973248342", "Rua Ayres da Cunha",
                                 "115.058.024-07");
-
-                CaixaRepositorio repo = new CaixaRepositorio();
-                repo.criar(caixa);
 
                 System.out.println("Nome: " + caixaAtendente.getNome());
                 System.out.println("Horario de entrada: " + caixaAtendente.getHorarioEntrada());

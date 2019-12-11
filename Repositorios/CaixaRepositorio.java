@@ -1,4 +1,4 @@
-package Repositórios;
+package Repositorios;
 
 import java.util.ArrayList;
 import Modelos.Caixa;

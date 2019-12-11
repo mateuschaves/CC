@@ -1,9 +1,9 @@
-package Repositórios;
+package Repositorios;
 
 import java.util.ArrayList;
-import Produto.ProdutoQuantidade;
-import Produto.Estoque;
 import Interfaces.ProdutoInterface;
+import Modelos.*;
+import Controladores.*;
 
 public class ProdutoRepositorio implements ProdutoInterface {
     private ArrayList<Produto> produtos = new ArrayList<Produto>();
